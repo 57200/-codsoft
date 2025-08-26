@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recommendation System</title>
+    <style>
+        body { font-family: Arial; text-align: center; padding: 50px; background: #f0f8ff; }
+        input, button { padding: 10px; margin: 5px; font-size: 16px; }
+        .movie { margin: 5px; padding: 10px; display: inline-block; background: #add8e6; border-radius: 8px;
+                 animation: float 1s ease-in-out infinite alternate; }
+        @keyframes float { 0% { transform: translateY(0); } 100% { transform: translateY(-10px); } }
+    </style>
+</head>
+<body>
+    <h1>🎬 Movie Recommendation System 🎬</h1>
+    <form method="POST">
+        <input type="number" name="user_id" placeholder="Enter User ID" required>
+        <input type="text" name="movie_title" placeholder="Enter Movie Title" required>
+        <button type="submit">Get Recommendations</button>
+    </form>
+    <h2>Collaborative Filtering Recommendations:</h2>
+    {% for movie in collaborative %}
+        <div class="movie">{{ movie }}</div>
+    {% endfor %}
+    <h2>Content-Based Recommendations:</h2>
+    {% for movie in content_based %}
+        <div class="movie">{{ movie }}</div>
+    {% endfor %}
+</body>
+</html>
