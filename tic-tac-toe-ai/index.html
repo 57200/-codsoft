@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic-Tac-Toe — Unbeatable AI</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <h1>Tic‑Tac‑Toe <span class="muted">— Unbeatable AI</span></h1>
+    <div class="controls">
+      <label>
+        You play as:
+        <select id="humanMark">
+          <option value="X">X (first)</option>
+          <option value="O">O (second)</option>
+        </select>
+      </label>
+      <label>
+        AI Algorithm:
+        <select id="algo">
+          <option value="ab">Minimax + Alpha‑Beta</option>
+          <option value="minimax">Plain Minimax</option>
+        </select>
+      </label>
+      <button id="newGame">New Game</button>
+    </div>
+
+    <div id="status" class="status">Your turn.</div>
+
+    <div class="board" id="board" role="grid" aria-label="Tic-Tac-Toe board">
+      <!-- 9 cells -->
+      <button class="cell" data-idx="0" aria-label="Cell 1"></button>
+      <button class="cell" data-idx="1" aria-label="Cell 2"></button>
+      <button class="cell" data-idx="2" aria-label="Cell 3"></button>
+      <button class="cell" data-idx="3" aria-label="Cell 4"></button>
+      <button class="cell" data-idx="4" aria-label="Cell 5"></button>
+      <button class="cell" data-idx="5" aria-label="Cell 6"></button>
+      <button class="cell" data-idx="6" aria-label="Cell 7"></button>
+      <button class="cell" data-idx="7" aria-label="Cell 8"></button>
+      <button class="cell" data-idx="8" aria-label="Cell 9"></button>
+    </div>
+
+    <footer>
+      <p>Tip: Try to win. You can't 😉 — the AI uses optimal play.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
